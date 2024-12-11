@@ -1,6 +1,8 @@
 # CRM - Customer Relationship Management System
 
-<p>This is simple Spring application for CRM created using Spring MVC and Hibernate.</p>
+This is simple Spring application for CRM created using Spring MVC and Hibernate.
+
+**Original project**: [Link to Original Project](https://github.com/CryptoSingh1337/crm-springmvc-hibernate)
 
 ## Illustrative image
 <img src="screenshots/login.png" alt="Login Page" width="700">
