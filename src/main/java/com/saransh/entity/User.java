@@ -7,8 +7,8 @@ import javax.validation.constraints.NotNull;
  */
 
 @Entity
-@Table(name = "customer")
-public class Customer {
+@Table(name = "user")
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,14 +26,30 @@ public class Customer {
     @Column(name = "email")
     @NotNull(message = "is required")
     private String email;
+    
+    @Column(name = "username")
+    @NotNull(message = "is required")
+    private String username;
+    
+    @Column(name = "password")
+    @NotNull(message = "is required")
+    private String password;
+    
+    @Column(name = "role")
+    private String role;
+    
+    @Column(name = "code")
+    private String code;
 
-    public Customer() {
+    public User() {
     }
 
-    public Customer(String firstName, String lastName, String email) {
+    public User(String firstName, String lastName, String email, String username, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.username=username;
+        this.password=password;
     }
 
     public int getId() {
@@ -67,6 +83,38 @@ public class Customer {
     public void setEmail(String email) {
         this.email = email;
     }
+    
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+    
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+    
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
 
     @Override
     public String toString() {
@@ -74,6 +122,9 @@ public class Customer {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", role='" + role + '\'' +
                 '}';
     }
 }

@@ -22,4 +22,26 @@
     <servlet-name>frontController</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
+  
+  <filter>
+    <filter-name>AuthenticationFilter</filter-name>
+    <filter-class>com.saransh.filter.AuthenticationFilter</filter-class>
+</filter>
+
+<filter-mapping>
+    <filter-name>AuthenticationFilter</filter-name>
+    <url-pattern>/customer/*</url-pattern> 
+    <url-pattern>/admin/user/*</url-pattern>
+</filter-mapping>
+
+<filter>
+    <filter-name>AuthorizationFilter</filter-name>
+    <filter-class>com.saransh.filter.AuthorizationFilter</filter-class>
+</filter>
+
+<filter-mapping>
+    <filter-name>AuthorizationFilter</filter-name>
+    <url-pattern>/admin/user/*</url-pattern> 
+</filter-mapping>
+  
 </web-app>

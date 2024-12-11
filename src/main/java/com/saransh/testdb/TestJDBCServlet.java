@@ -10,9 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- * Created by CryptoSingh1337 on 5/31/2021
- */
+
 
 @WebServlet("/testdb")
 public class TestJDBCServlet extends HttpServlet {

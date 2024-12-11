@@ -5,7 +5,6 @@ import com.saransh.entity.Customer;
 import java.util.List;
 
 /**
- * Created by CryptoSingh1337 on 6/1/2021
  *
  * Its a simple DAO interface for Customer class.
  */

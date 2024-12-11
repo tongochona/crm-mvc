@@ -8,9 +8,7 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.util.List;
 
-/**
- * Created by CryptoSingh1337 on 6/1/2021
- */
+
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
